@@ -1,0 +1,12 @@
+.active::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 90%;
+  height: 2px;
+  border-radius: 20px;
+  background-color: black;
+}
+.active {
+  color: darkblue;
+}
