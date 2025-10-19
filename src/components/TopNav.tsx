@@ -5,16 +5,16 @@ const TopNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className='w-full'>
-      {/* Top blue bar with centered button */}
-      <div className='bg-blue-700 text-center py-2'>
+    <header className='w-full shadow-md'>
+      {/* Top blue bar with centered button - only mobile */}
+      <div className='bg-blue-700 text-center py-2 block lg:hidden'>
         <button className='uppercase cursor-pointer text-sm font-semibold bg-white text-blue-700 border border-blue-700 rounded-2xl px-6 py-1'>
           Book an Eye Test
         </button>
       </div>
 
       {/* Main nav for mobile */}
-      <div className='flex items-center justify-between px-4 py-3 lg:hidden bg-white shadow'>
+      <div className='flex items-center justify-between px-4 py-3 lg:hidden bg-white'>
         {/* Hamburger icon */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -62,7 +62,7 @@ const TopNav = () => {
 
       {/* Optional mobile menu */}
       {isMenuOpen && (
-        <nav className='lg:hidden bg-white shadow-md'>
+        <nav className='lg:hidden bg-white'>
           <ul className='flex flex-col items-center gap-4 py-4'>
             <li><a href='#' className='text-gray-700'>Glasses</a></li>
             <li><a href='#' className='text-gray-700'>Sunglasses</a></li>
@@ -74,7 +74,7 @@ const TopNav = () => {
       )}
 
       {/* Desktop nav (hidden on mobile) */}
-      <div className='hidden lg:flex items-center justify-between px-10 py-5'>
+      <div className='hidden lg:flex items-center justify-between px-10 py-5 bg-white'>
         <Logo />
         <div className='flex gap-6'>
           <a href='#' className='hover:text-blue-700'>Glasses</a>
