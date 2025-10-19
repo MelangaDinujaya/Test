@@ -1,4 +1,4 @@
-import React from 'react'
+
 import type { DUMMY_PRODUCT } from '../config/constant'
 import Color from './Color'
 import Carousel from 'react-multi-carousel';
@@ -77,5 +77,6 @@ const Product = (props: Props) => {
         </div>
     )
 }
+
 
 export default Product
