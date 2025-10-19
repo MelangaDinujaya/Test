@@ -1,11 +1,10 @@
-
-import { DUMMY_PRODUCT } from '../config/constant'
+import type { DUMMY_PRODUCT } from '../config/constant'
 
 type Props = {
   product: typeof DUMMY_PRODUCT
 }
 
-const FrameDetails: React.FC<Props> = ({ product }) => {
+const FrameDetails = ({ product }: Props) => {
   return (
     <div className='p-4 border rounded-2xl relative mt-10'>
       <h1 className='absolute top-0 -translate-y-1/2 -translate-x-1/2 px-5 font-bold left-1/2 bg-white text-4xl'>
@@ -13,9 +12,7 @@ const FrameDetails: React.FC<Props> = ({ product }) => {
       </h1>
 
       <div className='flex flex-col lg:flex-row items-center'>
-        <div className='p-10 lg:p-0'>
-          {product.frameDetails[0].desc}
-        </div>
+        <div className='p-10 lg:p-0'>{product.frameDetails[0].desc}</div>
 
         <div className='text-center lg:w-1/2 space-y-6'>
           <h2 className='font-semibold text-2xl'>Made from Acetate</h2>
@@ -44,4 +41,3 @@ const FrameDetails: React.FC<Props> = ({ product }) => {
 }
 
 export default FrameDetails
-
