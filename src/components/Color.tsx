@@ -1,4 +1,3 @@
-import React from 'react'
 
 type Props = {
     onChange : (col: string) => void
@@ -13,5 +12,6 @@ const Color = (props: Props) => {
         </div>
     )
 }
+
 
 export default Color
