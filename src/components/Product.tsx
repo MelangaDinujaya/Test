@@ -50,13 +50,13 @@ const Product = ({ product }: Props) => {
         <div className='py-4'>
           {/* Updated title */}
           <h2 className='text-xl font-semibold'>2 pairs from ${product.price}</h2>
-          <p>{product.desc}</p>
+          
+          {/* Updated description */}
+          <p>Discount auto applied on checkout</p>
           <hr />
 
           {/* Color palette */}
-          <h2 className='font-semibold capitalize text-2xl mt-5'>
-            {product.colors?.find((color) => color.color === selectedColor)?.label}
-          </h2>
+          <h2 className='font-semibold capitalize text-2xl mt-5'>Gaby</h2>
           <div className='flex flex-wrap gap-4 max-w-72 mt-5'>
             {product.colors.map((color, index) => (
               <Color
@@ -67,9 +67,7 @@ const Product = ({ product }: Props) => {
               />
             ))}
           </div>
-          <h5 className='mt-2 capitalize'>
-            Color: {product.colors?.find((color) => color.color === selectedColor)?.label}
-          </h5>
+          <h5 className='mt-2 capitalize'>Color: Gaby</h5>
         </div>
 
         <hr />
