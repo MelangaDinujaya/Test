@@ -7,7 +7,7 @@ type Props = {
 const FrameDetails = ({ product }: Props) => {
   return (
     <div className='p-4 border rounded-2xl relative mt-10'>
-      <h1 className='absolute top-0 -translate-y-1/2 -translate-x-1/2 px-5 font-bold left-1/2 bg-white text-4xl'>
+      <h1 className='absolute top-0 -translate-y-1/2 -translate-x-1/2 px-5 font-bold left-1/2 bg-white lg:text-4xl'>
         About the frames
       </h1>
 
@@ -41,3 +41,4 @@ const FrameDetails = ({ product }: Props) => {
 }
 
 export default FrameDetails
+
