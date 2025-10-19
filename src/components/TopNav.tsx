@@ -6,16 +6,16 @@ const TopNav = () => {
 
   return (
     <header className='w-full shadow-md'>
-      {/* Top blue bar with centered button - only mobile */}
+      {/* Mobile top blue bar */}
       <div className='bg-blue-700 text-center py-2 block lg:hidden'>
-        <button className='uppercase cursor-pointer text-sm font-semibold bg-white text-blue-700 border border-blue-700 rounded-2xl px-6 py-1'>
+        <button className='uppercase text-sm font-semibold bg-white text-blue-700 border border-blue-700 rounded-2xl px-6 py-1'>
           Book an Eye Test
         </button>
       </div>
 
-      {/* Main nav for mobile */}
+      {/* Mobile main nav */}
       <div className='flex items-center justify-between px-4 py-3 lg:hidden bg-white'>
-        {/* Hamburger icon */}
+        {/* Hamburger */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className='text-gray-700 focus:outline-none'
@@ -41,7 +41,7 @@ const TopNav = () => {
           <Logo />
         </div>
 
-        {/* Cart icon */}
+        {/* Mobile cart */}
         <button className='text-gray-700'>
           <svg
             className='w-6 h-6'
@@ -60,7 +60,7 @@ const TopNav = () => {
         </button>
       </div>
 
-      {/* Optional mobile menu */}
+      {/* Mobile menu dropdown */}
       {isMenuOpen && (
         <nav className='lg:hidden bg-white'>
           <ul className='flex flex-col items-center gap-4 py-4'>
@@ -73,7 +73,7 @@ const TopNav = () => {
         </nav>
       )}
 
-      {/* Desktop nav (hidden on mobile) */}
+      {/* Desktop nav */}
       <div className='hidden lg:flex items-center justify-between px-10 py-5 bg-white'>
         <Logo />
         <div className='flex gap-6'>
@@ -84,9 +84,19 @@ const TopNav = () => {
           <a href='#' className='hover:text-blue-700'>Offers</a>
         </div>
         <div className='flex items-center gap-4'>
-          <button className='uppercase cursor-pointer text-sm font-semibold bg-white text-blue-700 border border-blue-700 rounded-2xl px-6 py-1'>
+          <button className='uppercase text-sm font-semibold bg-white text-blue-700 border border-blue-700 rounded-2xl px-6 py-1'>
             Book an Eye Test
           </button>
+          <img
+            className='w-6 h-6'
+            src='https://www.iconpacks.net/icons/1/free-search-icon-957-thumb.png'
+            alt='search'
+          />
+          <img
+            className='w-6 h-6'
+            src='https://static.vecteezy.com/system/resources/previews/020/911/736/non_2x/profile-icon-user-icon-person-icon-free-png.png'
+            alt='account'
+          />
           <img
             className='w-6 h-6'
             src='https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/instagram-shop-icon.png'
