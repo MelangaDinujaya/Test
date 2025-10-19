@@ -8,12 +8,12 @@ function App() {
   return (
     <>
       <TopNav />
-      {/* Caraousel */}
-      <main className='px-5'>
+
+      {/* Add top padding to prevent overlap with fixed header */}
+      <main className='px-5 pt-24'> 
         <Product product={DUMMY_PRODUCT} />
         <FrameDetails product={DUMMY_PRODUCT} />
       </main>
-
     </>
   )
 }
