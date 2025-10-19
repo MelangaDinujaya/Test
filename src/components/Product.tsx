@@ -48,7 +48,8 @@ const Product = ({ product }: Props) => {
       {/* Product Info */}
       <div className='w-full lg:w-1/3'>
         <div className='py-4'>
-          <h2 className='text-xl font-semibold'>{product.title}</h2>
+          {/* Updated title */}
+          <h2 className='text-xl font-semibold'>2 pairs from ${product.price}</h2>
           <p>{product.desc}</p>
           <hr />
 
