@@ -30,6 +30,9 @@ const responsive = {
 const Product = ({ product }: Props) => {
   const [selectedColor, setSelectedColor] = useState(product.colors[0].color)
 
+  const selectedColorLabel =
+    product.colors.find((color) => color.color === selectedColor)?.label || 'Gaby'
+
   return (
     <div className='flex items-center justify-center gap-2 flex-col lg:flex-row'>
       {/* Product carousel */}
@@ -48,15 +51,12 @@ const Product = ({ product }: Props) => {
       {/* Product Info */}
       <div className='w-full lg:w-1/3'>
         <div className='py-4'>
-          {/* Updated title */}
           <h2 className='text-xl font-semibold'>2 pairs from ${product.price}</h2>
-          
-          {/* Updated description */}
           <p>Discount auto applied on checkout</p>
           <hr />
 
           {/* Color palette */}
-          <h2 className='font-semibold capitalize text-2xl mt-5'>Gaby</h2>
+          <h2 className='font-semibold capitalize text-2xl mt-5'>{selectedColorLabel}</h2>
           <div className='flex flex-wrap gap-4 max-w-72 mt-5'>
             {product.colors.map((color, index) => (
               <Color
@@ -67,7 +67,8 @@ const Product = ({ product }: Props) => {
               />
             ))}
           </div>
-          <h5 className='mt-2 capitalize'>Color: Gaby</h5>
+          {/* Dynamic color name */}
+          <h5 className='mt-2 capitalize'>Color: {selectedColorLabel}</h5>
         </div>
 
         <hr />
