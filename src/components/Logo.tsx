@@ -1,4 +1,4 @@
-import React from 'react'
+
 import logo from '../assets/OW-Logo-RGB.svg'
 
 const Logo = () => {
@@ -8,5 +8,6 @@ const Logo = () => {
         </div>
     )
 }
+
 
 export default Logo
