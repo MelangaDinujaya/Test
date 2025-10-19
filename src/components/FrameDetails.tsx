@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { DUMMY_PRODUCT } from '../config/constant'
 
 type Props = {
@@ -44,3 +44,4 @@ const FrameDetails: React.FC<Props> = ({ product }) => {
 }
 
 export default FrameDetails
+
