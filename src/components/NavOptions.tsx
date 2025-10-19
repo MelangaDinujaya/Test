@@ -1,4 +1,3 @@
-import React from 'react'
 
 const NavOptions = () => {
     return (
@@ -15,5 +14,6 @@ const NavOptions = () => {
         </div>
     )
 }
+
 
 export default NavOptions
