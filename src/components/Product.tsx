@@ -55,8 +55,9 @@ const Product = ({ product }: Props) => {
           <p>Discount auto applied on checkout</p>
           <hr />
 
-          {/* Color palette */}
-          <h2 className='font-semibold capitalize text-2xl mt-5'>{selectedColorLabel}</h2>
+          {/* Fixed color title */}
+          <h2 className='font-semibold capitalize text-2xl mt-5'>Gaby</h2>
+
           <div className='flex flex-wrap gap-4 max-w-72 mt-5'>
             {product.colors.map((color, index) => (
               <Color
@@ -67,6 +68,7 @@ const Product = ({ product }: Props) => {
               />
             ))}
           </div>
+
           {/* Dynamic color name */}
           <h5 className='mt-2 capitalize'>Color: {selectedColorLabel}</h5>
         </div>
