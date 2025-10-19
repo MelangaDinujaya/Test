@@ -1,28 +1,16 @@
-
-
-import { useState } from 'react'
-import { NAV_LINKS } from '../config/constant'
-import Logo from './Logo'
-import NavLink from './NavLink'
 import NavOptions from './NavOptions'
-import { FiMenu } from 'react-icons/fi'
 
 const TopNav = () => {
-    const [open, setOpen] = useState(false)
-    return (
-        <div className='border-b-gray-500 overflow-visible border pt-10 lg:pt-0 flex items-center justify-between px-10 relative'>
-            <FiMenu size={24} onClick={() => setOpen(!open)} className='block lg:hidden cursor-pointer' />
-            <Logo />
-            <div className={`${open ? 'block absolute' : 'hidden lg:relative lg:block'} z-50 bg-white rounded-2xl lg:bg-transparent  bottom-0 translate-y-full lg:translate-y-0 left-0 flex-col lg:flex-row flex`}>
-                {
-                    NAV_LINKS.map((item, index) => (
-                        <NavLink key={index} label={item.label} path={item.path} isActive={index === 0} />
-                    ))
-                }
-            </div>
-            <NavOptions />
-        </div>
-    )
+  return (
+    <div className='flex items-center justify-between w-full px-5 py-1 bg-blue-700 lg:bg-transparent lg:relative fixed top-0 left-0 z-50'>
+      <button className='uppercase cursor-pointer text-sm font-semibold bg-white border-blue-700 text-blue-700 border rounded-2xl px-10 py-1'>
+        Book an eye test
+      </button>
+
+      {/* Nav options (search, user, Instagram) */}
+      <NavOptions />
+    </div>
+  )
 }
 
 export default TopNav
